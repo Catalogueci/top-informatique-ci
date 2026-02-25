@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP INFORMATIQUE - Votre boutique tech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -70,6 +71,9 @@
             text-decoration: none;
             margin-left: 20px;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         /* Navigation */
@@ -181,11 +185,20 @@
         .product-image {
             height: 200px;
             background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .image-placeholder {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            height: 100%;
+            font-size: 40px;
             color: #003366;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
         }
 
         .product-info {
@@ -377,6 +390,13 @@
             .user-actions {
                 margin-top: 10px;
             }
+            .filters {
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+            .filter-btn {
+                flex-shrink: 0;
+            }
         }
     </style>
 </head>
@@ -390,31 +410,15 @@
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="🔍 Rechercher un produit, une marque...">
             </div>
-            <div class="user-actions">
-                <a href="https://wa.me/2250160435955" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>
+           
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <ul class="nav-links container">
-            <li><a href="#" class="nav-link" data-category="">Tous</a></li>
-            <li><a href="#" class="nav-link" data-category="Ordinateurs Portables">Ordinateurs</a></li>
-            <li><a href="#" class="nav-link" data-category="Imprimantes">Imprimantes</a></li>
-            <li><a href="#" class="nav-link" data-category="Écrans">Écrans</a></li>
-            <li><a href="#" class="nav-link" data-category="Point d'accés">Point d'accés</a></li>
-            <li><a href="#" class="nav-link" data-category="Téléphonie IP">Téléphonie IP</a></li>
-            <li><a href="#" class="nav-link" data-category="Autocom">Autocom</a></li>
-            <li><a href="#" class="nav-link" data-category="Consommables">Consommables</a></li>
-        </ul>
-    </nav>
+   
 
     <!-- Banner -->
     <section class="banner">
-        <h1>TECHNOLOGIE À PRIX IMBATTABLES</h1>
+        <h1>Bienvenue sur notre boutique en ligne</h1>
         <p>Découvrez nos produits TP-Link, HP, Dell, Lenovo, Canon, Epson et toutes les grandes marques au meilleur prix</p>
         <a href="#products" class="cta-button">Voir les offres</a>
     </section>
@@ -464,33 +468,25 @@
             </div>
             <div class="footer-section">
                 <h3>Contact WhatsApp</h3>
-                <ul>
-                    <li><a href="https://wa.me/2250160435955" target="_blank"><i class="fab fa-whatsapp"></i> +225 01 60 43 59 55</a></li>
-                    <li><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</li>
-                
-                </ul>
+                 <div class="user-actions">
+                <a href="https://wa.me/2250160435955" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+            
             </div>
             <div class="footer-section">
-                <h3>Catégories</h3>
-                <ul>
-                    <li><a href="#" class="nav-link" data-category="Ordinateurs Portables">Ordinateurs Portables</a></li>
-                    <li><a href="#" class="nav-link" data-category="Point d'accés">Point d'accés</a></li>
-                    <li><a href="#" class="nav-link" data-category="Téléphonie IP">Téléphonie IP</a></li>
-                    <li><a href="#" class="nav-link" data-category="Autocom">Autocom</a></li>
-                    <li><a href="#" class="nav-link" data-category="Imprimantes">Imprimantes</a></li>
-                    <li><a href="#" class="nav-link" data-category="Consommables">Consommables</a></li>
-                </ul>
+                <h3>Horaires</h3>
+                <p>Lun-Sam: 8h-18h</p>
+                <p>Dimanche: Fermé</p>
             </div>
         </div>
-        <div class="copyright">
-            © 2024 TOP INFORMATIQUE - Tous droits réservés.
-        </div>
+        
     </footer>
 
     <script>
         // DONNÉES DES PRODUITS
         const produits = [
-            // NOUVEAU PRODUIT AJOUTÉ : Yealink T31P
             {
                 id: 68,
                 nom: "Yealink T31P",
@@ -500,10 +496,8 @@
                 marque: "Yealink",
                 modele: "T31P",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.PUJcTAwwrJt1Tanefj-ZEAHaEK?w=284&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
-            
-            // PRODUITS TP-LINK ET TOPLINK (64-67)
             {
                 id: 64,
                 nom: "TP-Link Amoda EAP110-Outdoor",
@@ -513,7 +507,7 @@
                 marque: "TP-Link",
                 modele: "EAP110-Outdoor",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://static.tp-link.com/upload/image-line/EAP225-Outdoor_normal_20230821084232j.png"
             },
             {
                 id: 65,
@@ -524,7 +518,7 @@
                 marque: "TP-Link",
                 modele: "OC220",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://static.tp-link.com/upload/image-line/OC200_overview_01_normal_20250126022212n.jpg"
             },
             {
                 id: 66,
@@ -535,7 +529,7 @@
                 marque: "TP-Link",
                 modele: "Deco AX1500",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://needy.shop/cdn/shop/files/61_ab0ec889-2459-4a84-87b4-70c2a63f70c9_700x700.jpg?v=1716881745"
             },
             {
                 id: 67,
@@ -546,10 +540,8 @@
                 marque: "Toplink",
                 modele: "TL-POS80W",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://ci.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/12/758662/1.jpg?7659"
             },
-            
-            // PRODUITS TÉLÉPHONIE IP ET PBX (59-63)
             {
                 id: 59,
                 nom: "Grandstream GXP1625",
@@ -559,54 +551,52 @@
                 marque: "Grandstream",
                 modele: "GXP1625",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.grandstream.com/hubfs/Product%20Images/GXP/gxp1620_25_front_web.png"
             },
             {
                 id: 60,
-                nom: "Fanvil T31P",
-                description: "Téléphone IP Fanvil T31P, écran LCD 2.4\", PoE, supporte 3 lignes SIP",
+                nom: "Fanvil X303P",
+                description: "Téléphone IP Fanvil X303P, 2 lignes SIP, écran LCD, PoE, HD audio",
                 prix: 30000,
                 categorie: "Téléphonie IP",
                 marque: "Fanvil",
-                modele: "T31P",
+                modele: "X303P",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=400&h=300&fit=crop&auto=format"
+                image: "https://cdn.store-assets.com/s/337542/i/70618265.png"
             },
             {
                 id: 61,
                 nom: "Yeastar S20",
-                description: "PBX VoIP Yeastar S20, 20 utilisateurs, 8 lignes simultanées, Gateway FXS/FXO",
+                description: "Autocom Yeastar S20, 20 utilisateurs, 8 lignes simultanées, Gateway FXS/FXO",
                 prix: 180000,
-                categorie: "PBX VoIP",
+                categorie: "Autocom",
                 marque: "Yeastar",
                 modele: "S20",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image:"https://www.icttech.net/images/thumbs/0001325_yeastar-s20-voip-pbx-20-user-10-voip-open-box.png"
             },
             {
                 id: 62,
                 nom: "Grandstream UCM6302",
-                description: "PBX IP Grandstream UCM6302, 50 utilisateurs, 4 ports FXS, intégration VoIP avancée",
+                description: "Autocom Grandstream UCM6302, 50 utilisateurs, 4 ports FXS, intégration VoIP avancée",
                 prix: 250000,
-                categorie: "PBX VoIP",
+                categorie: "Autocom",
                 marque: "Grandstream",
                 modele: "UCM6302",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://1genieur.ci/551-large_default/grandstream-ucm6302a.jpg"
             },
             {
                 id: 63,
                 nom: "Toner HP 207A",
-                description: "Toner HP 207A Noir, compatible imprimantes LaserJet Pro MFP M227-M231",
+                description: "Toner HP 207A Noir, compatible imprimantes LaserJet Pro MFP M282-M282",
                 prix: 47000,
                 categorie: "Consommables",
                 marque: "HP",
                 modele: "207A",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://digistar.ma/wp-content/webp-express/webp-images/uploads/2023/08/HP-207A-Noir-W2210A-Toner-HP-LaserJet-dorigine-1.jpg.webp"
             },
-            
-            // PRODUITS EXISTANTS (1-58)
             {
                 id: 1,
                 nom: "Canon PIXMA G3410 - Imprimante Multifonction",
@@ -616,7 +606,7 @@
                 marque: "Canon",
                 modele: "PIXMA G3410",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://cdn.idealo.com/folder/Product/202783/8/202783887/s4_produktbild_gross_2/canon-pixma-g3410.jpg"
             },
             {
                 id: 2,
@@ -627,7 +617,7 @@
                 marque: "Lenovo",
                 modele: "ThinkBook 14 G7",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://media.rueducommerce.fr/r1200/ld/products/00/06/07/70/LD0006077061_0006143814_0006145415.jpg"
             },
             {
                 id: 3,
@@ -638,7 +628,7 @@
                 marque: "Lenovo",
                 modele: "ThinkPad E16 G1",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.voomstore.ci/65237-large_default/portable-lenovo-thinkpad-e16-g1-i5-1335u-8g-512gb-ssd-nos-2y-cci-20w1s55500.jpg"
             },
             {
                 id: 4,
@@ -649,7 +639,7 @@
                 marque: "HP",
                 modele: "15fd0229nia",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://puresolutions.ma/wp-content/uploads/2024/01/Nouveau-projet-2024-01-30T161809.321-510x510.webp"
             },
             {
                 id: 5,
@@ -660,7 +650,7 @@
                 marque: "Acer",
                 modele: "X1329WHP",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1560983070-999b01e6e7e9?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.bigbaazaaru.mv/wp-content/uploads/2024/07/IkKTyMBb1658825526-480x380.png"
             },
             {
                 id: 6,
@@ -671,7 +661,7 @@
                 marque: "Zebra",
                 modele: "ZD621T",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.printerbase.co.uk/media/catalog/product/cache/da0d4b41a2735aaf1e00b4dd4990980e/z/e/zebra-zd420a_2_1_9_3.jpg"
             },
             {
                 id: 7,
@@ -682,7 +672,7 @@
                 marque: "Canon",
                 modele: "imageRUNNER 3326i",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.tic.ci/storage/ca2.jpg"
             },
             {
                 id: 8,
@@ -693,7 +683,7 @@
                 marque: "HP",
                 modele: "Pro 3600 F1",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://hp.widen.net/content/udktz8twhi/png/udktz8twhi.png?w=800&h=600&dpi=72&color=ffffff00"
             },
             {
                 id: 9,
@@ -704,7 +694,7 @@
                 marque: "HP",
                 modele: "Pro N4600 Fnw1",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://hp.widen.net/content/ndzhonakz8/png/ndzhonakz8.png?w=800&h=600&dpi=72&color=ffffff00"
             },
             {
                 id: 10,
@@ -715,7 +705,7 @@
                 marque: "HP",
                 modele: "Pro 2600 F1",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://hp.widen.net/content/zijsar8amq/png/zijsar8amq.png?w=800&h=600&dpi=72&color=ffffff00"
             },
             {
                 id: 11,
@@ -726,7 +716,7 @@
                 marque: "Epson",
                 modele: "WorkForce DS-1630",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.tic.ci/storage/sc1-3.jpg"
             },
             {
                 id: 12,
@@ -737,7 +727,7 @@
                 marque: "Epson",
                 modele: "DS530",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.ntc-tech.com/cdn/shop/products/vZtU2UWFg8TKgGv79xPe0oqNZpuqljSEdwgwrud5i3SY8pglihidv6s6wMMe4KIFJsQhPd3ODEPN03Xiv_8ffhgC1pQL6rs_s4470.jpg?v=1707849215&width=1445"
             },
             {
                 id: 13,
@@ -748,7 +738,7 @@
                 marque: "Epson",
                 modele: "Workforce DS870",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.startech.com.bd/image/cache/catalog/scanner/epson/ds-870/ds-870-01-500x500.webp"
             },
             {
                 id: 14,
@@ -759,7 +749,7 @@
                 marque: "Epson",
                 modele: "Perfection V39II",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://mediaserver.goepson.com/ImConvServlet/imconv/ec4242888a461054d142031212949d640bac3412/1200Wx1200H?use=banner&hybrisId=B2C&assetDescr=V39II-%281%29"
             },
             {
                 id: 15,
@@ -770,7 +760,7 @@
                 marque: "Cisco",
                 modele: "C9200L-24P-4G-E",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1612102756292-5c622e5bb79d?w=400&h=300&fit=crop&auto=format"
+                image: "https://media.router-switch.com/media/catalog/product/cache/b90fceee6a5fa7acd36a04c7b968181c/c/i/cisco-c9200l-24p-4g-e.jpg"
             },
             {
                 id: 16,
@@ -781,7 +771,7 @@
                 marque: "Cisco",
                 modele: "C9300L-24P-4G-A",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1612102756292-5c622e5bb79d?w=400&h=300&fit=crop&auto=format"
+                image: "https://www.telquestintl.com/site/images/products/C9200L-24P-4G-A-WS.Media-1.jpg?resizeid=5&resizeh=1200&resizew=1200"
             },
             {
                 id: 17,
@@ -792,7 +782,7 @@
                 marque: "Cisco",
                 modele: "CBS350-24P-4G",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1612102756292-5c622e5bb79d?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.kHQQ1V9VvsJXONXnsZ6zowHaHa?w=207&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 18,
@@ -803,7 +793,7 @@
                 marque: "HP",
                 modele: "ProLiant DL380 Gen10",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.qdR_VFcMtcCovR-TPWWgXQHaEK?w=320&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 19,
@@ -814,7 +804,7 @@
                 marque: "Dell",
                 modele: "PowerEdge T150",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.4PWVz1X_FmFZ2ZILl0MjywHaEK?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 20,
@@ -825,7 +815,7 @@
                 marque: "Dell",
                 modele: "PowerEdge R250",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.4PWVz1X_FmFZ2ZILl0MjywHaEK?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 21,
@@ -836,7 +826,7 @@
                 marque: "HP",
                 modele: "290 G9 MT",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.bcFl1L04ip6Z2TP2v1d1lwHaHa?w=210&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 22,
@@ -847,7 +837,7 @@
                 marque: "HP",
                 modele: "290 G9 MT",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.bcFl1L04ip6Z2TP2v1d1lwHaHa?w=210&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 23,
@@ -858,7 +848,7 @@
                 marque: "HP",
                 modele: "22-dg0012",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Zl28XMPOX51U7zTqQX-jIAHaE8?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 24,
@@ -869,7 +859,7 @@
                 marque: "HP",
                 modele: "24-cr0012L",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Zl28XMPOX51U7zTqQX-jIAHaE8?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 25,
@@ -880,7 +870,7 @@
                 marque: "Dell",
                 modele: "Vostro 3030",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.jE29kPD_Ej7p9Z_tfFWcXgHaE8?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 26,
@@ -891,7 +881,7 @@
                 marque: "Dell",
                 modele: "Optiplex 7020MT",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.jE29kPD_Ej7p9Z_tfFWcXgHaE8?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 27,
@@ -902,7 +892,7 @@
                 marque: "HP",
                 modele: "260 G9",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.jE29kPD_Ej7p9Z_tfFWcXgHaE8?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 28,
@@ -913,7 +903,7 @@
                 marque: "Lenovo",
                 modele: "L24e-40",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.4S-JU5b-DfOb5a4yH8lINAHaHa?w=207&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 29,
@@ -924,7 +914,7 @@
                 marque: "Lenovo",
                 modele: "L27i-4A",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.4S-JU5b-DfOb5a4yH8lINAHaHa?w=207&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 30,
@@ -935,7 +925,7 @@
                 marque: "HP",
                 modele: "P22v G5",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.MW1ujLEyVkCv5I0ECWbscAHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 31,
@@ -946,7 +936,7 @@
                 marque: "Dell",
                 modele: "S2725H",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.weH7EDe0RQgUVk59t_h1RgHaEK?w=303&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 32,
@@ -957,7 +947,7 @@
                 marque: "HP",
                 modele: "32\" 532SF",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.MW1ujLEyVkCv5I0ECWbscAHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 33,
@@ -968,7 +958,7 @@
                 marque: "Panasonic",
                 modele: "KX-TES824CE",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.sduapn3ptQYzRPhMq80s4gHaHa?w=211&h=211&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 34,
@@ -979,7 +969,7 @@
                 marque: "HP",
                 modele: "CS10 French",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.8qUiwGk_9Q9CbVJz6bSUlgHaHa?w=212&h=212&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 35,
@@ -990,7 +980,7 @@
                 marque: "Xiaomi",
                 modele: "Mi Box S",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.N6fV-6P3aYSpA_hVU-PZ0QHaEK?w=298&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 36,
@@ -1001,7 +991,7 @@
                 marque: "HP",
                 modele: "Omnibook 5 Flip 14-fp0023dx",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.YW7GNPUAYjfEeBOcw9fJDAHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 37,
@@ -1012,7 +1002,7 @@
                 marque: "HP",
                 modele: "Spectre x360 14t-eu000",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.YW7GNPUAYjfEeBOcw9fJDAHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 38,
@@ -1023,7 +1013,7 @@
                 marque: "HP",
                 modele: "EliteBook 830 G11",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.YW7GNPUAYjfEeBOcw9fJDAHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 39,
@@ -1034,7 +1024,7 @@
                 marque: "HP",
                 modele: "Omnibook X Flip 14-fm0023dx",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.YW7GNPUAYjfEeBOcw9fJDAHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 40,
@@ -1045,7 +1035,7 @@
                 marque: "HP",
                 modele: "Victus 15-FA2701WM",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.YW7GNPUAYjfEeBOcw9fJDAHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 41,
@@ -1056,7 +1046,7 @@
                 marque: "Dell",
                 modele: "Latitude 5540",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Q6fK1iqWrggIBIY8DUxr7QHaE8?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 42,
@@ -1067,7 +1057,7 @@
                 marque: "Dell",
                 modele: "Latitude 13 5340",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Q6fK1iqWrggIBIY8DUxr7QHaE8?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 43,
@@ -1078,7 +1068,7 @@
                 marque: "Dell",
                 modele: "Latitude 3450",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Q6fK1iqWrggIBIY8DUxr7QHaE8?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 44,
@@ -1089,7 +1079,7 @@
                 marque: "Dell",
                 modele: "Vostro 3530",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Q6fK1iqWrggIBIY8DUxr7QHaE8?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 45,
@@ -1100,7 +1090,7 @@
                 marque: "Asus",
                 modele: "VivoBook X1504VA",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.e0okXp35vapA23FCS6U_pAHaEK?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 46,
@@ -1111,7 +1101,7 @@
                 marque: "Asus",
                 modele: "TUF FX507VV",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.e0okXp35vapA23FCS6U_pAHaEK?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 47,
@@ -1122,7 +1112,7 @@
                 marque: "Acer",
                 modele: "Aspire Lite",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Q6fK1iqWrggIBIY8DUxr7QHaE8?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 48,
@@ -1133,7 +1123,7 @@
                 marque: "Acer",
                 modele: "Nitro V15 Gaming",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Q6fK1iqWrggIBIY8DUxr7QHaE8?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 49,
@@ -1144,7 +1134,7 @@
                 marque: "HP",
                 modele: "200 G4",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Zl28XMPOX51U7zTqQX-jIAHaE8?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 50,
@@ -1155,7 +1145,7 @@
                 marque: "HP",
                 modele: "24-CR0039L",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Zl28XMPOX51U7zTqQX-jIAHaE8?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 51,
@@ -1166,7 +1156,7 @@
                 marque: "HP",
                 modele: "27-CR0068NY",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Zl28XMPOX51U7zTqQX-jIAHaE8?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 52,
@@ -1177,7 +1167,7 @@
                 marque: "HP",
                 modele: "24-CR0049NH",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.Zl28XMPOX51U7zTqQX-jIAHaE8?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 53,
@@ -1188,7 +1178,7 @@
                 marque: "Epson",
                 modele: "EcoTank L18050",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.dCmg64e-kPgs7F8v_QNQRQHaHa?w=218&h=218&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 54,
@@ -1199,7 +1189,7 @@
                 marque: "Epson",
                 modele: "TMT20II",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.dCmg64e-kPgs7F8v_QNQRQHaHa?w=218&h=218&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 55,
@@ -1210,7 +1200,7 @@
                 marque: "Canon",
                 modele: "i-SENSYS LBP6030B",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.dCmg64e-kPgs7F8v_QNQRQHaHa?w=218&h=218&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 56,
@@ -1221,7 +1211,7 @@
                 marque: "Canon",
                 modele: "i-SENSYS MF275dw",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563005365-35752acfa0c9?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.dCmg64e-kPgs7F8v_QNQRQHaHa?w=218&h=218&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 57,
@@ -1232,7 +1222,7 @@
                 marque: "Mikrotik",
                 modele: "RB951Ui-2HnD",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.-9sWev3e7C58-aUYDbIAvwHaE7?w=290&h=193&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             },
             {
                 id: 58,
@@ -1243,7 +1233,7 @@
                 marque: "Logitech",
                 modele: "H390",
                 etat: "Neuf",
-                image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=300&fit=crop&auto=format"
+                image: "https://th.bing.com/th/id/OIP.4S-JU5b-DfOb5a4yH8lINAHaHa?w=207&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             }
         ];
 
@@ -1272,7 +1262,7 @@
                 const productCard = document.createElement('div');
                 productCard.className = 'product-card';
                 
-                // Choisir une icône selon la catégorie
+                // Choisir une icône selon la catégorie (pour placeholder)
                 let icon = '💻';
                 if (product.categorie.includes('Imprimante')) icon = '🖨️';
                 if (product.categorie.includes('Scanner')) icon = '📄';
@@ -1289,8 +1279,8 @@
                 if (product.categorie.includes('Contrôleur')) icon = '🎛️';
                 
                 productCard.innerHTML = `
-                    <div class="product-image">
-                        ${icon}
+                    <div class="product-image" data-image="${product.image}" data-icon="${icon}">
+                        <div class="image-placeholder">${icon}</div>
                     </div>
                     <div class="product-info">
                         <div class="product-brand">${product.marque}</div>
@@ -1302,6 +1292,19 @@
                         </button>
                     </div>
                 `;
+                
+                // Charger l'image en arrière-plan
+                const imgDiv = productCard.querySelector('.product-image');
+                const img = new Image();
+                img.onload = function() {
+                    imgDiv.style.backgroundImage = `url('${product.image}')`;
+                    imgDiv.querySelector('.image-placeholder').style.display = 'none';
+                };
+                img.onerror = function() {
+                    // Garder l'icône si l'image ne se charge pas
+                    imgDiv.style.backgroundColor = '#f0f0f0';
+                };
+                img.src = product.image;
                 
                 productsGrid.appendChild(productCard);
             });
@@ -1432,11 +1435,13 @@ Est-il disponible?`;
                 filterProducts();
             });
             
-            // Ajouter les icônes FontAwesome
-            const fontAwesome = document.createElement('link');
-            fontAwesome.rel = 'stylesheet';
-            fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
-            document.head.appendChild(fontAwesome);
+            // Faire défiler jusqu'à la section produits quand on clique sur le CTA
+            document.querySelector('.cta-button').addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('#products').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            });
         });
     </script>
 </body>
